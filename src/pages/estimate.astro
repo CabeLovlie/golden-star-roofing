@@ -189,17 +189,35 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <!-- TRUST ROW -->
   <section class="bg-[#0a0a0a] border-t border-[#2a2a2a] py-12 px-6">
     <div class="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
-      {[
-        { icon: '✓', title: 'Licensed & Bonded', body: 'Fully licensed in Washington State. Bonded and insured on every job.' },
-        { icon: '★', title: 'Free On-Site Estimates', body: 'Brandon walks the roof himself. No charge, no obligation.' },
-        { icon: '◎', title: 'Serving King County Since 2012', body: 'Federal Way-based. 13 years of roofs done right in our backyard.' },
-      ].map(item => (
-        <div>
-          <div class="text-[#D4A017] text-2xl mb-3">{item.icon}</div>
-          <p class="font-oswald uppercase text-white text-sm mb-2">{item.title}</p>
-          <p class="font-inter text-text-muted text-xs leading-relaxed">{item.body}</p>
+      <div>
+        <div class="text-[#D4A017] text-2xl mb-3">&#10003;</div>
+        <p class="font-oswald uppercase text-white text-sm mb-2">Licensed &amp; Bonded</p>
+        <p class="font-inter text-text-muted text-xs leading-relaxed">Fully licensed in Washington State. Bonded and insured on every job.</p>
+      </div>
+      <div>
+        <div class="flex justify-center mb-3">
+          <svg width="22" height="26" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <clipPath id="shield-left-est">
+                <rect x="0" y="0" width="7" height="16" />
+              </clipPath>
+              <clipPath id="shield-right-est">
+                <rect x="7" y="0" width="7" height="16" />
+              </clipPath>
+            </defs>
+            <path d="M7 1L1.5 3.5V8C1.5 11.5 4 14 7 15C10 14 12.5 11.5 12.5 8V3.5L7 1Z" fill="#D4A017" clip-path="url(#shield-left-est)" />
+            <path d="M7 1L1.5 3.5V8C1.5 11.5 4 14 7 15C10 14 12.5 11.5 12.5 8V3.5L7 1Z" fill="#0a0a0a" clip-path="url(#shield-right-est)" />
+            <path d="M7 1L1.5 3.5V8C1.5 11.5 4 14 7 15C10 14 12.5 11.5 12.5 8V3.5L7 1Z" stroke="#D4A017" stroke-width="1" stroke-linejoin="round" fill="none" />
+          </svg>
         </div>
-      ))}
+        <p class="font-oswald uppercase text-white text-sm mb-2">15&ndash;25 Year Workmanship Warranty</p>
+        <p class="font-inter text-text-muted text-xs leading-relaxed">We back our work. Warranty length depends on the system installed.</p>
+      </div>
+      <div>
+        <div class="text-[#D4A017] text-2xl mb-3">&#9678;</div>
+        <p class="font-oswald uppercase text-white text-sm mb-2">Serving King County Since 2011</p>
+        <p class="font-inter text-text-muted text-xs leading-relaxed">Federal Way-based. Over 14 years of roofs done right in our backyard.</p>
+      </div>
     </div>
   </section>
 
