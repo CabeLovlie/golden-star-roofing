@@ -1,0 +1,206 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Free Estimate | Golden Star Roofing LLC — Federal Way, WA"
+  description="Request a free roofing estimate from Golden Star Roofing LLC. No pressure. No obligation. Serving Federal Way and greater King County."
+>
+
+  <!-- HERO -->
+  <section class="bg-[#0a0a0a] border-b border-[#2a2a2a] py-20 px-6 text-center">
+    <p class="section-eyebrow mb-4">No Obligation</p>
+    <div class="border-t border-[#D4A017] w-12 mx-auto mb-5"></div>
+    <h1 class="font-oswald uppercase text-white text-4xl md:text-6xl mb-4">Get Your Free Estimate</h1>
+    <p class="font-inter text-text-muted text-lg max-w-xl mx-auto leading-relaxed">
+      No pressure. No obligation. Just an honest assessment and a fair quote from Brandon himself.
+    </p>
+  </section>
+
+  <!-- FORM + HOW IT WORKS -->
+  <section class="bg-[#141414] py-20 px-6">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-14 items-start">
+
+      <!-- How it works -->
+      <div>
+        <h2 class="font-oswald uppercase text-white text-2xl mb-8">How It Works</h2>
+        <ol class="space-y-7 mb-12">
+          <li class="flex gap-5">
+            <div class="w-8 h-8 bg-[#D4A017] text-black font-oswald font-bold flex items-center justify-center shrink-0 text-sm">1</div>
+            <div>
+              <p class="font-oswald uppercase text-white text-sm mb-1">Call or Submit the Form</p>
+              <p class="font-inter text-text-muted text-sm leading-relaxed">We'll reach out to schedule a time that works for you — usually within a day or two.</p>
+            </div>
+          </li>
+          <li class="flex gap-5">
+            <div class="w-8 h-8 bg-[#D4A017] text-black font-oswald font-bold flex items-center justify-center shrink-0 text-sm">2</div>
+            <div>
+              <p class="font-oswald uppercase text-white text-sm mb-1">Brandon Assesses Your Roof</p>
+              <p class="font-inter text-text-muted text-sm leading-relaxed">A thorough on-site inspection at no charge. No shortcuts, no junior rep — Brandon walks it himself.</p>
+            </div>
+          </li>
+          <li class="flex gap-5">
+            <div class="w-8 h-8 bg-[#D4A017] text-black font-oswald font-bold flex items-center justify-center shrink-0 text-sm">3</div>
+            <div>
+              <p class="font-oswald uppercase text-white text-sm mb-1">You Get a Written Quote</p>
+              <p class="font-inter text-text-muted text-sm leading-relaxed">Detailed, itemized pricing in writing. You'll know exactly what the job covers before committing to anything.</p>
+            </div>
+          </li>
+        </ol>
+
+        <div class="space-y-3">
+          {[
+            'Licensed & Bonded',
+            'No high-pressure sales tactics',
+            'Most estimates scheduled within the week',
+            'Written quotes — no verbal promises',
+          ].map(item => (
+            <div class="flex items-center gap-3">
+              <span class="text-[#D4A017] text-sm">✓</span>
+              <span class="font-inter text-text-muted text-sm">{item}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="bg-[#1a1a1a] border border-[#2a2a2a] p-8">
+        <h2 class="font-oswald uppercase text-white text-xl mb-6">Request an Estimate</h2>
+
+        <form
+          name="estimate-request"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          class="space-y-4"
+        >
+          <input type="hidden" name="form-name" value="estimate-request" />
+          <p class="hidden">
+            <label>Don't fill this out: <input name="bot-field" /></label>
+          </p>
+
+          <div>
+            <label class="block font-oswald uppercase tracking-widest text-white/60 text-xs mb-1.5" for="name">
+              Full Name <span class="text-[#D4A017]">*</span>
+            </label>
+            <input
+              id="name"
+              type="text"
+              name="name"
+              required
+              placeholder="Jane Smith"
+              class="w-full bg-[#0a0a0a] border border-[#2a2a2a] text-white font-inter text-sm px-3 py-2.5 focus:outline-none focus:border-[#D4A017] placeholder-white/20 transition-colors"
+            />
+          </div>
+
+          <div>
+            <label class="block font-oswald uppercase tracking-widest text-white/60 text-xs mb-1.5" for="phone">
+              Phone Number <span class="text-[#D4A017]">*</span>
+            </label>
+            <input
+              id="phone"
+              type="tel"
+              name="phone"
+              required
+              placeholder="(206) 555-0100"
+              class="w-full bg-[#0a0a0a] border border-[#2a2a2a] text-white font-inter text-sm px-3 py-2.5 focus:outline-none focus:border-[#D4A017] placeholder-white/20 transition-colors"
+            />
+          </div>
+
+          <div>
+            <label class="block font-oswald uppercase tracking-widest text-white/60 text-xs mb-1.5" for="email">
+              Email Address <span class="text-[#D4A017]">*</span>
+            </label>
+            <input
+              id="email"
+              type="email"
+              name="email"
+              required
+              placeholder="jane@example.com"
+              class="w-full bg-[#0a0a0a] border border-[#2a2a2a] text-white font-inter text-sm px-3 py-2.5 focus:outline-none focus:border-[#D4A017] placeholder-white/20 transition-colors"
+            />
+          </div>
+
+          <div>
+            <label class="block font-oswald uppercase tracking-widest text-white/60 text-xs mb-1.5" for="service">
+              Service Needed <span class="text-[#D4A017]">*</span>
+            </label>
+            <select
+              id="service"
+              name="service"
+              required
+              class="w-full bg-[#0a0a0a] border border-[#2a2a2a] text-white font-inter text-sm px-3 py-2.5 focus:outline-none focus:border-[#D4A017] transition-colors"
+            >
+              <option value="" disabled selected>Select a service</option>
+              <option value="residential-replacement">Residential Roof Replacement</option>
+              <option value="roof-repair">Roof Repair</option>
+              <option value="flat-low-slope">Flat / Low Slope Roofing</option>
+              <option value="inspection">Inspection</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block font-oswald uppercase tracking-widest text-white/60 text-xs mb-1.5" for="address">
+              Address / City <span class="text-[#D4A017]">*</span>
+            </label>
+            <input
+              id="address"
+              type="text"
+              name="address"
+              required
+              placeholder="123 Main St, Federal Way, WA"
+              class="w-full bg-[#0a0a0a] border border-[#2a2a2a] text-white font-inter text-sm px-3 py-2.5 focus:outline-none focus:border-[#D4A017] placeholder-white/20 transition-colors"
+            />
+          </div>
+
+          <div>
+            <label class="block font-oswald uppercase tracking-widest text-white/60 text-xs mb-1.5" for="message">
+              Message / Additional Details
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Tell us about your roof — age, current issues, timeline..."
+              class="w-full bg-[#0a0a0a] border border-[#2a2a2a] text-white font-inter text-sm px-3 py-2.5 focus:outline-none focus:border-[#D4A017] placeholder-white/20 resize-none transition-colors"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full btn-gold py-3.5 text-sm mt-2"
+          >
+            Request My Free Estimate
+          </button>
+        </form>
+
+        <p class="font-inter text-text-muted text-sm text-center mt-5">
+          Or call us directly:
+          <a href="tel:2068839841" class="text-[#D4A017] font-semibold hover:text-[#F0B820] transition-colors ml-1">
+            (206) 883-9841
+          </a>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TRUST ROW -->
+  <section class="bg-[#0a0a0a] border-t border-[#2a2a2a] py-12 px-6">
+    <div class="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
+      {[
+        { icon: '✓', title: 'Licensed & Bonded', body: 'Fully licensed in Washington State. Bonded and insured on every job.' },
+        { icon: '★', title: 'Free On-Site Estimates', body: 'Brandon walks the roof himself. No charge, no obligation.' },
+        { icon: '◎', title: 'Serving King County Since 2012', body: 'Federal Way-based. 13 years of roofs done right in our backyard.' },
+      ].map(item => (
+        <div>
+          <div class="text-[#D4A017] text-2xl mb-3">{item.icon}</div>
+          <p class="font-oswald uppercase text-white text-sm mb-2">{item.title}</p>
+          <p class="font-inter text-text-muted text-xs leading-relaxed">{item.body}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+</BaseLayout>

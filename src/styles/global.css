@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0a0a0a;
+    color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+}
+
+@layer components {
+  .gold-rule {
+    @apply border-t border-[#D4A017];
+  }
+
+  .btn-gold {
+    @apply bg-[#D4A017] text-black font-oswald uppercase tracking-widest text-sm px-6 py-3 hover:bg-[#F0B820] transition-colors duration-200;
+  }
+
+  .btn-gold-outline {
+    @apply border border-[#D4A017] text-[#D4A017] font-oswald uppercase tracking-widest text-sm px-6 py-3 hover:bg-[#D4A017] hover:text-black transition-colors duration-200;
+  }
+
+  .section-eyebrow {
+    @apply font-oswald uppercase tracking-[0.15em] text-[#D4A017] text-xs mb-3;
+  }
+
+  .img-placeholder {
+    @apply bg-[#1a1a1a] border border-[#D4A017]/30 flex items-center justify-center text-[#D4A017]/50 font-oswald text-xs uppercase tracking-widest;
+  }
+}

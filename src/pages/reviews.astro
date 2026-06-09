@@ -1,0 +1,135 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ReviewCard from '../components/ReviewCard.astro';
+
+const reviews = [
+  {
+    quote: "Brandon came out the same week I called, gave me a straight quote, and his crew knocked out the full replacement in two days. Zero mess left behind. This guy runs a tight operation. Highly recommend to anyone in Federal Way.",
+    reviewer: "M. Thompson",
+    city: "Federal Way, WA",
+  },
+  {
+    quote: "Had a leak that two other contractors couldn't track down. Brandon found the source in 20 minutes, explained exactly what was wrong, and fixed the flashing the same afternoon. Honest, fast, fair price.",
+    reviewer: "J. Caldwell",
+    city: "Kent, WA",
+  },
+  {
+    quote: "Golden Star did our flat roof on a small commercial building. They showed up on time, used quality materials, and finished ahead of schedule. Three years later, not a single issue. Would hire again without a second thought.",
+    reviewer: "D. Hernandez",
+    city: "Renton, WA",
+  },
+  {
+    quote: "Storm blew some shingles off and I had water getting in. Called Brandon on a Saturday morning and he had someone out by early afternoon. Repair was clean and they patched it properly. None of this temporary-fix nonsense.",
+    reviewer: "K. Okafor",
+    city: "SeaTac, WA",
+  },
+  {
+    quote: "Got three estimates for a full reroof. Brandon was the most knowledgeable by far — he actually explained the difference between the material options instead of just pushing the most expensive. Chose Golden Star and the result was excellent.",
+    reviewer: "P. Sullivan",
+    city: "Federal Way, WA",
+  },
+  {
+    quote: "We had massive moss growth on our 20-year-old roof. Brandon's crew treated the whole thing and replaced the sections that were beyond saving. Came back six months later to check on it. That kind of follow-through is rare.",
+    reviewer: "R. Nakamura",
+    city: "Auburn, WA",
+  },
+  {
+    quote: "Used Golden Star for a pre-purchase inspection on a house we were buying. Brandon walked the roof himself and gave us a written report. Found two issues the seller's agent hadn't disclosed. Saved us thousands. This is the contractor you want in your corner.",
+    reviewer: "L. Fontaine",
+    city: "Burien, WA",
+  },
+  {
+    quote: "Family-owned and it shows. Brandon treats you like a neighbor, not a customer number. His crew was respectful, cleaned up every day, and the roof looks fantastic. Went with Malarkey shingles on his recommendation — exactly right for our climate.",
+    reviewer: "C. Walsh",
+    city: "Bellevue, WA",
+  },
+  {
+    quote: "Second time I've used Golden Star. First was a repair four years ago, this time a full replacement. Same quality, same no-BS attitude. If you're in King County and need a roofer, this is the call to make.",
+    reviewer: "T. Bergstrom",
+    city: "Federal Way, WA",
+  },
+  {
+    quote: "Brandon did our flat garage roof and the back porch cover. Both look great. He caught a drainage issue during the estimate that would've caused problems down the road — fixed it as part of the job without charging extra. Straight shooter.",
+    reviewer: "A. Morales",
+    city: "Des Moines, WA",
+  },
+  {
+    quote: "Five stars isn't enough. Our roof was a disaster — previous owner had patched it with the wrong materials and it was a mess. Brandon told me the truth upfront: this needed a full replacement, not another patch. Glad I listened. Haven't had a single issue in two years.",
+    reviewer: "S. Brennan",
+    city: "Tukwila, WA",
+  },
+];
+---
+
+<BaseLayout
+  title="Customer Reviews | Golden Star Roofing LLC — Federal Way, WA"
+  description="11 reviews. Every one a 5-star. See what King County homeowners say about Golden Star Roofing LLC and owner Brandon."
+>
+
+  <!-- HERO -->
+  <section class="bg-[#0a0a0a] border-b border-[#2a2a2a] py-20 px-6 text-center">
+    <div class="flex justify-center gap-1 mb-5">
+      {[1,2,3,4,5].map(() => (
+        <span class="text-[#D4A017] text-4xl">&#9733;</span>
+      ))}
+    </div>
+    <p class="section-eyebrow mb-4">Customer Stories</p>
+    <div class="border-t border-[#D4A017] w-12 mx-auto mb-5"></div>
+    <h1 class="font-oswald uppercase text-white text-4xl md:text-6xl mb-4">
+      11 Reviews. Every One a 5-Star.
+    </h1>
+    <p class="font-inter text-text-muted text-lg max-w-xl mx-auto leading-relaxed">
+      Don't take our word for it &mdash; here's what King County homeowners are saying about Brandon and his crew.
+    </p>
+  </section>
+
+  <!-- RATING FEATURE BAR -->
+  <section class="bg-[#141414] border-b border-[#2a2a2a] py-8 px-6">
+    <div class="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-8 text-center sm:text-left">
+      <div>
+        <p class="font-oswald text-[#D4A017] text-6xl font-bold leading-none">5.0</p>
+        <div class="flex justify-center sm:justify-start gap-0.5 mt-1">
+          {[1,2,3,4,5].map(() => <span class="text-[#D4A017] text-sm">&#9733;</span>)}
+        </div>
+      </div>
+      <div class="h-12 border-l border-[#2a2a2a] hidden sm:block"></div>
+      <div>
+        <p class="font-oswald uppercase text-white text-lg">100% Five-Star Reviews</p>
+        <p class="font-inter text-text-muted text-sm mt-1">Based on 11 Google Reviews</p>
+      </div>
+      <div class="h-12 border-l border-[#2a2a2a] hidden sm:block"></div>
+      <div>
+        <a
+          href="#"
+          class="btn-gold-outline text-xs px-5 py-2.5 whitespace-nowrap"
+        >
+          Leave Us a Review &rarr;
+        </a>
+        <p class="font-inter text-text-muted text-xs mt-2">Your review helps other homeowners.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS GRID -->
+  <section class="bg-[#0a0a0a] py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {reviews.map(r => (
+          <ReviewCard quote={r.quote} reviewer={r.reviewer} city={r.city} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- LEAVE A REVIEW CTA -->
+  <section class="bg-[#141414] border-t border-[#2a2a2a] py-16 px-6 text-center">
+    <div class="max-w-lg mx-auto">
+      <p class="font-oswald uppercase text-white text-xl mb-2">Happy with our work?</p>
+      <p class="font-inter text-text-muted text-sm mb-7">Your feedback helps other homeowners find quality contractors.</p>
+      <a href="#" class="btn-gold-outline inline-block">
+        Leave Us a Google Review &rarr;
+      </a>
+    </div>
+  </section>
+
+</BaseLayout>

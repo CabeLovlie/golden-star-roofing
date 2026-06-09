@@ -1,0 +1,22 @@
+---
+interface Props {
+  quote: string;
+  reviewer: string;
+  city: string;
+}
+const { quote, reviewer, city } = Astro.props;
+---
+
+<div class="bg-[#1a1a1a] border border-[#2a2a2a] p-6 flex flex-col gap-4">
+  <div class="flex gap-0.5">
+    {[1,2,3,4,5].map(() => (
+      <span class="text-[#D4A017] text-base">&#9733;</span>
+    ))}
+  </div>
+  <p class="text-white/80 font-inter italic text-sm leading-relaxed flex-1">
+    &ldquo;{quote}&rdquo;
+  </p>
+  <p class="text-text-muted font-inter text-xs">
+    {reviewer} &mdash; <span class="text-white/40">{city}</span>
+  </p>
+</div>

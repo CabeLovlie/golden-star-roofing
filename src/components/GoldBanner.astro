@@ -1,0 +1,23 @@
+---
+interface Props {
+  heading?: string;
+  subhead?: string;
+  ctaLabel?: string;
+  ctaHref?: string;
+}
+
+const {
+  heading = 'Ready for a New Roof?',
+  subhead = 'Free estimates. No pressure. Just honest work.',
+  ctaLabel = 'Get Your Free Estimate',
+  ctaHref = '/estimate',
+} = Astro.props;
+---
+
+<section class="bg-[#0a0a0a] border-t border-[#D4A017] border-b border-b-[#D4A017] py-14 px-6 text-center">
+  <h2 class="font-oswald uppercase text-white text-3xl md:text-4xl mb-3">{heading}</h2>
+  <p class="text-text-muted font-inter text-base mb-8">{subhead}</p>
+  <a href={ctaHref} class="btn-gold inline-block text-base px-10 py-4">
+    {ctaLabel}
+  </a>
+</section>

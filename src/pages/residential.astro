@@ -1,0 +1,151 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import GoldBanner from '../components/GoldBanner.astro';
+---
+
+<BaseLayout
+  title="Residential Roofing | Golden Star Roofing LLC — Federal Way, WA"
+  description="Full roof replacements, repairs, and inspections for King County homeowners. CertainTeed & Malarkey specialists. Free estimates. Licensed and bonded."
+  ogImage="/images/golden-star-11.jpg"
+>
+
+  <!-- HERO -->
+  <section
+    class="relative min-h-[50vh] flex items-center justify-center text-center"
+    style="background-image: url('/images/golden-star-11.jpg'); background-size: cover; background-position: center;"
+  >
+    <div class="absolute inset-0 bg-black/70"></div>
+    <div class="relative z-10 px-6 max-w-2xl mx-auto">
+      <p class="section-eyebrow mb-4">Residential Services</p>
+      <div class="border-t border-[#D4A017] w-12 mx-auto mb-5"></div>
+      <h1 class="font-oswald uppercase text-white text-4xl md:text-6xl mb-4">Residential Roofing</h1>
+      <p class="font-inter text-gray-300 text-lg max-w-lg mx-auto leading-relaxed">
+        Full replacements, repairs, and inspections for homeowners across King County.
+      </p>
+    </div>
+  </section>
+
+  <!-- SERVICES DETAIL — alternating layout -->
+  <section class="bg-[#0a0a0a] py-20 px-6">
+    <div class="max-w-5xl mx-auto space-y-20">
+
+      <!-- Roof Replacement -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div>
+          <p class="section-eyebrow mb-3">Full Service</p>
+          <h2 class="font-oswald uppercase text-white text-3xl mb-4">Roof Replacement</h2>
+          <div class="border-t border-[#D4A017] w-10 mb-5"></div>
+          <p class="font-inter text-text-muted text-sm leading-relaxed mb-4">
+            Full tear-off and replacement using CertainTeed Landmark and Malarkey shingles. Built to last 30+ years in the Pacific Northwest climate. Brandon walks every job personally — from the initial estimate to final inspection.
+          </p>
+          <p class="font-inter text-text-muted text-sm leading-relaxed mb-6">
+            We handle permits, disposal, and cleanup. You get a roof that protects your home and a yard that looks like we were never there.
+          </p>
+          <a href="/estimate" class="btn-gold inline-block">Get a Free Estimate</a>
+        </div>
+        <div class="h-72 md:h-96 overflow-hidden">
+          <img
+            src="/images/golden-star-12.jpg"
+            alt="Roof replacement project"
+            class="w-full h-full object-cover"
+            width="700"
+            height="500"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+          />
+          <div class="hidden w-full h-full items-center justify-center bg-[#1a1a1a] border border-[#D4A017]/30 text-[#D4A017]/40 font-oswald text-xs uppercase tracking-widest">golden-star-12.jpg</div>
+        </div>
+      </div>
+
+      <div class="border-t border-[#2a2a2a]"></div>
+
+      <!-- Roof Repair -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div class="order-2 md:order-1 h-72 md:h-96 overflow-hidden">
+          <img
+            src="/images/golden-star-13.jpg"
+            alt="Roof repair project"
+            class="w-full h-full object-cover"
+            width="700"
+            height="500"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+          />
+          <div class="hidden w-full h-full items-center justify-center bg-[#1a1a1a] border border-[#D4A017]/30 text-[#D4A017]/40 font-oswald text-xs uppercase tracking-widest">golden-star-13.jpg</div>
+        </div>
+        <div class="order-1 md:order-2">
+          <p class="section-eyebrow mb-3">Fast Turnaround</p>
+          <h2 class="font-oswald uppercase text-white text-3xl mb-4">Roof Repair</h2>
+          <div class="border-t border-[#D4A017] w-10 mb-5"></div>
+          <p class="font-inter text-text-muted text-sm leading-relaxed mb-4">
+            Leak detection, flashing repair, missing or damaged shingles, storm damage. When water is getting in, waiting makes it worse. Brandon's crew responds fast so your home stays protected.
+          </p>
+          <p class="font-inter text-text-muted text-sm leading-relaxed mb-6">
+            We diagnose the root cause — not just the symptom. Most repairs are completed the same day or next day.
+          </p>
+          <a href="/estimate" class="btn-gold inline-block">Request a Repair Quote</a>
+        </div>
+      </div>
+
+      <div class="border-t border-[#2a2a2a]"></div>
+
+      <!-- Roof Inspection -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div>
+          <p class="section-eyebrow mb-3">Know Before You Buy</p>
+          <h2 class="font-oswald uppercase text-white text-3xl mb-4">Roof Inspection</h2>
+          <div class="border-t border-[#D4A017] w-10 mb-5"></div>
+          <p class="font-inter text-text-muted text-sm leading-relaxed mb-4">
+            Pre-sale inspections, insurance claim support, and maintenance checks. Know exactly what you're dealing with before it becomes a problem — or before you sign on a new home.
+          </p>
+          <p class="font-inter text-text-muted text-sm leading-relaxed mb-6">
+            Brandon provides a clear written assessment with photos. No upselling. Just the facts about your roof's condition.
+          </p>
+          <a href="/estimate" class="btn-gold inline-block">Schedule an Inspection</a>
+        </div>
+        <div class="h-72 md:h-96 overflow-hidden">
+          <img
+            src="/images/golden-star-14.jpg"
+            alt="Roof inspection"
+            class="w-full h-full object-cover"
+            width="700"
+            height="500"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+          />
+          <div class="hidden w-full h-full items-center justify-center bg-[#1a1a1a] border border-[#D4A017]/30 text-[#D4A017]/40 font-oswald text-xs uppercase tracking-widest">golden-star-14.jpg</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MATERIALS SECTION -->
+  <section class="bg-[#141414] border-t border-[#2a2a2a] py-20 px-6">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="section-eyebrow">Trusted Products</p>
+        <div class="border-t border-[#D4A017] w-12 mx-auto mb-5"></div>
+        <h2 class="font-oswald uppercase text-white text-3xl md:text-4xl">Quality Materials, Period</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-[#1a1a1a] border border-[#2a2a2a] p-7">
+          <h3 class="font-oswald uppercase text-[#D4A017] text-lg mb-3">CertainTeed Landmark</h3>
+          <p class="font-inter text-text-muted text-sm leading-relaxed">
+            A PNW contractor favorite for good reason. CertainTeed Landmark shingles offer superior wind resistance, algae protection, and a lifetime warranty. Available in dozens of colors to match any home style.
+          </p>
+        </div>
+        <div class="bg-[#1a1a1a] border border-[#2a2a2a] p-7">
+          <h3 class="font-oswald uppercase text-[#D4A017] text-lg mb-3">Malarkey Roofing</h3>
+          <p class="font-inter text-text-muted text-sm leading-relaxed">
+            Manufactured in the Pacific Northwest specifically for wet climates. Malarkey's rubberized asphalt technology offers class-leading impact resistance and longevity — built for exactly what Federal Way throws at a roof.
+          </p>
+        </div>
+      </div>
+      <p class="text-center text-text-muted font-inter text-sm mt-8 max-w-xl mx-auto leading-relaxed">
+        Quality materials matter in the PNW. Cheap shingles fail faster in our wet, mossy climate. Brandon only installs what he'd put on his own home.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <GoldBanner />
+
+</BaseLayout>

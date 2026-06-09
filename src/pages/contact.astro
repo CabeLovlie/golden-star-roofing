@@ -1,0 +1,179 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const serviceAreas = [
+  'Federal Way', 'Seattle', 'Renton', 'Kent', 'Bellevue',
+  'Auburn', 'Des Moines', 'Burien', 'Tukwila', 'Shoreline',
+];
+---
+
+<BaseLayout
+  title="Contact | Golden Star Roofing LLC — Federal Way, WA"
+  description="Contact Golden Star Roofing LLC. Call (206) 883-9841 or send a message. Free estimates, emergency roof help, and honest answers for King County homeowners."
+>
+
+  <!-- HERO -->
+  <section class="bg-[#0a0a0a] border-b border-[#2a2a2a] py-20 px-6 text-center">
+    <p class="section-eyebrow mb-4">Get In Touch</p>
+    <div class="border-t border-[#D4A017] w-12 mx-auto mb-5"></div>
+    <h1 class="font-oswald uppercase text-white text-4xl md:text-6xl mb-4">
+      Contact Golden Star Roofing
+    </h1>
+    <p class="font-inter text-text-muted text-lg max-w-xl mx-auto leading-relaxed">
+      Reach out for a free estimate, a quick question, or emergency roof help.
+    </p>
+  </section>
+
+  <!-- TWO-COLUMN CONTACT -->
+  <section class="bg-[#141414] py-20 px-6">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+
+      <!-- Contact details -->
+      <div>
+        <h2 class="font-oswald uppercase text-white text-xl mb-8">Reach Us Directly</h2>
+
+        <div class="mb-7">
+          <p class="font-oswald uppercase tracking-widest text-white/40 text-xs mb-2">Phone</p>
+          <a
+            href="tel:2068839841"
+            class="text-[#D4A017] font-oswald text-4xl font-bold block hover:text-[#F0B820] transition-colors"
+          >
+            (206) 883-9841
+          </a>
+          <p class="font-inter text-text-muted text-xs mt-1">Click to call — we pick up.</p>
+        </div>
+
+        <div class="border-t border-[#2a2a2a] pt-6 mb-6">
+          <p class="font-oswald uppercase tracking-[0.15em] text-[#D4A017] text-xs mb-3">
+            Licensed &bull; Insured &bull; Bonded
+          </p>
+        </div>
+
+        <div class="mb-6">
+          <p class="font-oswald uppercase tracking-widest text-white/40 text-xs mb-2">Hours</p>
+          <div class="space-y-1">
+            <p class="font-inter text-text-muted text-sm">Mon–Sat: 7am–7pm</p>
+            <p class="font-inter text-text-muted text-sm">Sun: 7am–3pm</p>
+            <p class="font-inter text-white/30 text-xs mt-2">Emergency calls answered 24/7.</p>
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <p class="font-oswald uppercase tracking-widest text-white/40 text-xs mb-2">Follow</p>
+          <a
+            href="https://www.instagram.com/goldenstarroofingllc"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="font-inter text-text-muted text-sm hover:text-[#D4A017] transition-colors"
+          >
+            @goldenstarroofingllc
+          </a>
+        </div>
+      </div>
+
+      <!-- Contact form -->
+      <div class="bg-[#1a1a1a] border border-[#2a2a2a] p-8">
+        <h2 class="font-oswald uppercase text-white text-xl mb-6">Send a Message</h2>
+
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          class="space-y-4"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <p class="hidden">
+            <label>Don't fill this out: <input name="bot-field" /></label>
+          </p>
+
+          <div>
+            <label class="block font-oswald uppercase tracking-widest text-white/60 text-xs mb-1.5" for="name">
+              Name <span class="text-[#D4A017]">*</span>
+            </label>
+            <input
+              id="name"
+              type="text"
+              name="name"
+              required
+              placeholder="Jane Smith"
+              class="w-full bg-[#0a0a0a] border border-[#2a2a2a] text-white font-inter text-sm px-3 py-2.5 focus:outline-none focus:border-[#D4A017] placeholder-white/20 transition-colors"
+            />
+          </div>
+
+          <div>
+            <label class="block font-oswald uppercase tracking-widest text-white/60 text-xs mb-1.5" for="phone">
+              Phone <span class="text-[#D4A017]">*</span>
+            </label>
+            <input
+              id="phone"
+              type="tel"
+              name="phone"
+              required
+              placeholder="(206) 555-0100"
+              class="w-full bg-[#0a0a0a] border border-[#2a2a2a] text-white font-inter text-sm px-3 py-2.5 focus:outline-none focus:border-[#D4A017] placeholder-white/20 transition-colors"
+            />
+          </div>
+
+          <div>
+            <label class="block font-oswald uppercase tracking-widest text-white/60 text-xs mb-1.5" for="email">
+              Email <span class="text-[#D4A017]">*</span>
+            </label>
+            <input
+              id="email"
+              type="email"
+              name="email"
+              required
+              placeholder="jane@example.com"
+              class="w-full bg-[#0a0a0a] border border-[#2a2a2a] text-white font-inter text-sm px-3 py-2.5 focus:outline-none focus:border-[#D4A017] placeholder-white/20 transition-colors"
+            />
+          </div>
+
+          <div>
+            <label class="block font-oswald uppercase tracking-widest text-white/60 text-xs mb-1.5" for="message">
+              Message <span class="text-[#D4A017]">*</span>
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              required
+              rows="5"
+              placeholder="What can we help you with?"
+              class="w-full bg-[#0a0a0a] border border-[#2a2a2a] text-white font-inter text-sm px-3 py-2.5 focus:outline-none focus:border-[#D4A017] placeholder-white/20 resize-none transition-colors"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="w-full btn-gold py-3.5 text-sm mt-2">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE AREA -->
+  <section class="bg-[#0a0a0a] border-t border-[#2a2a2a] py-16 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="section-eyebrow mb-4">Where We Work</p>
+      <div class="border-t border-[#D4A017] w-12 mx-auto mb-5"></div>
+      <h2 class="font-oswald uppercase text-white text-2xl md:text-3xl mb-8">Serving Greater King County</h2>
+
+      <div class="flex flex-wrap justify-center gap-x-4 gap-y-2 mb-6">
+        {serviceAreas.map((city, i) => (
+          <span class="font-oswald uppercase text-[#D4A017] tracking-widest text-sm">
+            {city}{i < serviceAreas.length - 1 ? ' •' : ''}
+          </span>
+        ))}
+        <span class="font-oswald uppercase text-[#D4A017] tracking-widest text-sm">And Surrounding Areas</span>
+      </div>
+
+      <p class="font-inter text-text-muted text-sm leading-relaxed max-w-lg mx-auto">
+        Don't see your city? Give us a call &mdash; we likely serve your area.
+        <a href="tel:2068839841" class="text-[#D4A017] hover:text-[#F0B820] transition-colors ml-1">
+          (206) 883-9841
+        </a>
+      </p>
+    </div>
+  </section>
+
+</BaseLayout>

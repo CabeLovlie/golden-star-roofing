@@ -1,0 +1,92 @@
+---
+const quickLinks = [
+  { label: 'Home', href: '/' },
+  { label: 'Residential Roofing', href: '/residential' },
+  { label: 'Flat Roofing', href: '/flat-roofing' },
+  { label: 'Reviews', href: '/reviews' },
+  { label: 'Free Estimate', href: '/estimate' },
+  { label: 'Contact', href: '/contact' },
+];
+
+const serviceAreas = [
+  'Federal Way', 'Seattle', 'Renton', 'Kent', 'Bellevue',
+  'Auburn', 'Des Moines', 'Burien', 'Tukwila', 'Shoreline',
+];
+---
+
+<footer class="bg-[#0a0a0a] border-t border-[#D4A017]">
+  <div class="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-3 gap-12">
+
+    <!-- Brand column -->
+    <div>
+      <a href="/">
+        <img
+          src="/images/golden-star-logo.jpg"
+          alt="Golden Star Roofing LLC"
+          class="h-16 w-auto object-contain mb-4"
+          width="160"
+          height="64"
+        />
+      </a>
+      <p class="font-oswald uppercase tracking-[0.15em] text-[#D4A017] text-xs mb-3">
+        Licensed &bull; Insured &bull; Bonded
+      </p>
+      <p class="text-text-muted text-sm leading-relaxed max-w-xs font-inter">
+        Family-owned roofing contractor serving Federal Way and greater King County since 2012. Brandon and his crew do honest work with quality materials.
+      </p>
+    </div>
+
+    <!-- Quick links -->
+    <div>
+      <p class="font-oswald uppercase tracking-[0.15em] text-white/40 text-xs mb-5">Quick Links</p>
+      <ul class="space-y-2.5">
+        {quickLinks.map(link => (
+          <li>
+            <a href={link.href} class="text-text-muted text-sm hover:text-white transition-colors font-inter">
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <!-- Contact column -->
+    <div>
+      <p class="font-oswald uppercase tracking-[0.15em] text-white/40 text-xs mb-5">Contact</p>
+      <a
+        href="tel:2068839841"
+        class="text-[#D4A017] font-oswald text-2xl font-bold block mb-3 hover:text-[#F0B820] transition-colors"
+      >
+        (206) 883-9841
+      </a>
+      <div class="space-y-1.5 mb-4">
+        <p class="text-text-muted text-sm font-inter">Mon–Sat: 7am–7pm</p>
+        <p class="text-text-muted text-sm font-inter">Sun: 7am–3pm</p>
+      </div>
+      <a
+        href="https://www.instagram.com/goldenstarroofingllc"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-text-muted text-sm hover:text-[#D4A017] transition-colors font-inter"
+      >
+        @goldenstarroofingllc
+      </a>
+      <div class="mt-5">
+        <p class="text-white/30 text-xs font-oswald uppercase tracking-widest mb-2">Service Areas</p>
+        <p class="text-text-muted text-xs leading-relaxed font-inter">
+          {serviceAreas.join(' \u2022 ')} &bull; and surrounding areas
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="border-t border-[#2a2a2a]">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-2">
+      <p class="text-white/30 text-xs font-inter">
+        &copy; 2025 Golden Star Roofing LLC &mdash; Federal Way, WA
+      </p>
+      <p class="text-white/20 text-xs font-inter">Licensed &bull; Insured &bull; Bonded</p>
+    </div>
+  </div>
+</footer>
